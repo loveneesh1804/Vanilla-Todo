@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="todo-box">
+        <h1>
+          <span style="color: #4284f3">T</span>
+          <span style="color: #ea4335">o</span>
+          <span style="color: #fabc05">d</span>
+          <span style="color: #33a852">o</span>
+        </h1>
+        <input type="text" class="task" placeholder="Enter Task" />
+        <button class="btn">Add</button>
+        <span class="err-msg"></span>
+      </div>
+      <div class="filter">
+        <button class="all">All</button>
+        <button class="true">Completed</button>
+        <button class="false">On Going</button>
+      </div>
+      <div class="task-list"></div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

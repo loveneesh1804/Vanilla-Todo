@@ -1,0 +1,218 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+.body{
+  margin: 0px;
+  padding: 0px;
+}
+.todo-box{
+  width: 40%;
+  margin: auto;
+  text-align: center;
+}
+.todo-box h1{
+  text-transform: uppercase;
+}
+.todo-box input{
+  border: 1px solid rgb(220,220,200);
+  padding: 15px 20px;
+  width: 65%;
+  border-bottom-left-radius: 25px ;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  border-top-left-radius: 25px;
+  transition: all 0.2s;
+}
+input:focus{
+  outline: none;
+}
+.todo-box button{
+  padding: 15px 25px;
+  border: 1px solid #4284F3;
+  background-color: white;
+  margin-left: -4px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  background-color: #4284F3;
+  color: whitesmoke;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  transition: all 0.2s;
+}
+.todo-box button:hover{
+  background-color: white;
+  color: black;
+  border: 1px solid rgb(220,220,200);
+}
+.err-msg{
+  display: block;
+  text-align: left;
+  padding-left: 10%;
+  font-size: 14px;
+  color: #EA4335;
+  padding-top: 4px;
+}
+#error{
+  border: 1px solid #EA4335;
+}
+.task-list{
+  width: 40%;
+  margin: auto;
+  border: 1px solid rgb(220,220,200);
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  padding: 10px 15px;
+  transition: all 0.2s;
+  background-color: white;
+}
+.filter{
+    width: 41.5%;
+    margin: auto;
+    margin-top: 50px;
+    text-align: right;
+    padding-bottom: 5px;
+}
+.filter>button{
+  background-color: white;
+  border: 1px solid rgb(220,220,200);
+  padding: 9px 18px;
+  transition: all 0.2s;
+}
+.filter>button:nth-child(2):hover:enabled{
+  background-color: #33A852;
+  color: white;
+  border: 1px solid #33A852;
+}
+.filter>button:nth-child(1):hover:enabled{
+  background-color: #4284F3;
+  color: white;
+  border: 1px solid #4284F3;
+}
+.filter>button:nth-child(3):hover:enabled{
+  background-color: #EA4335;
+  color: white;
+  border: 1px solid #EA4335;
+}
+.task-list>span{
+  display: flex;
+  justify-content: center;
+}
+.task-itm p{
+  width: 70%;
+}
+.task-itm{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(220,220,200);
+  padding: 0px 5px;
+}
+.task-itm:last-child{
+  border-bottom: none;
+}
+.task-itm button:last-child{
+  background: white;
+  border: none;
+  border-radius: 50%;
+  padding: 7px 9px;
+}
+.task-itm button:last-child:hover{
+  background-color: rgb(230,230,230);
+}
+.task-itm button>img{
+  width: 20px;
+}
+
+.task-itm div{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.task-itm div>button:not(:last-child){
+  padding: 8px 20px;
+  background-color: white;
+  border: 1px solid rgb(220,220,200);
+  transition: all 0.2s;
+}
+.task-itm div>button:not(:last-child):hover{
+  background-color: #4284F3;
+  color: white;
+  border: 1px solid #4284F3;
+}
+.task-itm input{
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  background-color: red
+}
+.completed{
+  text-decoration: line-through;
+}
+button:disabled{
+  cursor: not-allowed;
+}
+.modal{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0px;
+  transition: all 0.2s;
+  left: 0px;
+}
+.inner-modal{
+  background-color: white;
+  width: 40%;
+  border-radius: 4px;
+  padding: 20px;
+  position: absolute;
+  transition: all 0.2s;
+  top: 50%;
+  left: -50%;
+  transform: translate(-50%,-50%);
+}
+.inner-modal textarea{
+  width: 100%;
+  display: block;
+  border: none;
+  min-height: 5rem;
+  resize: none;
+}
+.inner-modal textarea:focus{
+  outline: none;
+}
+.inner-modal button:last-child{
+  margin-left: 88%;
+  margin-top: 20px;
+  padding: 9px 18px;
+  font-size: 16px;
+  background-color: #EA4335;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+.inner-modal button:last-child:disabled{
+  opacity: 0.5;
+}
+.inner-modal button:first-child{
+  border-radius: 50%;
+  padding: 7px 9px;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.inner-modal p{
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.inner-modal button:first-child>img{
+  width: 20px;
+}
+.inner-modal button:first-child:hover{
+  background-color: whitesmoke;
+}
